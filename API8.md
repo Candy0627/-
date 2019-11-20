@@ -109,14 +109,6 @@ axios
 
 - ##### HTTP请求方式 :  `GET`
 
-- ##### 请求参数
-
-    |参数|说明|
-    |:-----|-----                                   |
-    |account    |用户的账号                        |
-    |password   |用户的密码                            |
-    |type       |登陆方式,三个取值:FaceBook  Google  MBean |
-
 - ###### 接口示例(`后面的接口都参考这个例子,将不再详细说明`)
 ````
 //特别注意这里的token是登陆时返回的token,我们将他放在header里面作为登陆的凭证
@@ -145,6 +137,7 @@ axios
     |:-----|-----                                 |
     |uuid    |用户uuid                            |
     |role_id   |角色ID                            |
+    |server_id       |区服ID |
     |role_name       |角色名称 |
 
 - ###### 接口示例
@@ -153,6 +146,7 @@ axios.defaults.headers.common['Authorization'] = localStorage.token;
 var params = {
   uuid: localStorage.uuid,
   role_id: localStorage.role_id,
+  server_id: localStorage.server_id,
   role_name: localStorage.role_name,
 }
 axios
@@ -191,6 +185,8 @@ axios
     |:-----|-----                                 |
     |uuid    |用户uuid                            |
     |role_id   |角色ID                            |
+    |server_id   |区服ID                            |
+
 
 
 **6\. 获取弹幕接口**
@@ -213,5 +209,6 @@ axios
     |:-----|-----                                 |
     |uuid    |用户uuid                            |
     |role_id   |角色ID                            |
+    |server_id       |区服ID |
     |role_name   |角色名                           |
     |msg   |弹幕内容                               |
