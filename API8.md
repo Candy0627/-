@@ -134,11 +134,12 @@ axios
 
  - ##### 请求参数
     |参数|说明|
-    |:-----|-----                                 |
-    |uuid    |用户uuid                            |
-    |role_id   |角色ID                            |
-    |server_id       |区服ID |
-    |role_name       |角色名称 |
+    |:-----|-----                |
+    |uuid         |用户uuid      |
+    |role_id      |角色ID        |
+    |server_id    |区服ID        |
+    |role_name    |角色名称      |
+    |type         |分享的人物类型 |
 
 - ###### 接口示例
 ````
@@ -200,7 +201,7 @@ axios
 
 **7\. 保存弹幕接口**
 -------------------------------------------------
-- ##### API : http://www.api.com/api/barrage/store
+- ##### API : http://luandou.gamemorefun.net/api/barrage/store
 
 - ##### HTTP请求方式 : POST
 
@@ -212,3 +213,32 @@ axios
     |server_id       |区服ID |
     |role_name   |角色名                           |
     |msg   |弹幕内容                               |
+**8\. 获取已经分享过的人物接口**
+-----------------------------------------------------------
+- ##### API : http://luandou.gamemorefun.net/api/getSharedHero
+
+- ##### HTTP请求方式 : GET
+
+- ##### 请求参数
+    |参数|说明|
+    |:-----|-----                                 |
+    |uuid    |用户uuid                            |
+    |role_id   |角色ID                            |
+
+- #### 返回数据示例
+````
+    {
+        success:true,
+        msg:successfully,
+        data:[
+            {
+                "date":"2019-12-01", //分享的日期
+                "type":1,            //分享的人物类型
+            },
+            {
+                "date": "2019-12-02",
+                "type": "2",
+            }, 
+        ]
+    }
+````
