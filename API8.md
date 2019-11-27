@@ -242,3 +242,29 @@ axios
         ]
     }
 ````
+
+**9\. 助力分享接口**
+-------------------------------------------------
+- ##### API : http://luandou.gamemorefun.net/api/share/sharePage
+
+- ##### HTTP请求方式 : POST
+
+- ##### 请求参数
+    |参数|说明|
+    |:-----|-----                                 |
+    |uuid    |用户uuid                            |
+    |role_id   |角色ID                            |
+    |server_id       |区服ID |
+    |role_name   |角色名                           |
+
+**10\. 获取礼包码**
+-------------------------------------------------
+- ##### API : http://luandou.gamemorefun.net/api/share/getGiftCode
+
+- ##### HTTP请求方式 : GET
+
+- ##### 请求参数
+    |参数|说明|
+    |:-----|-----                                 |
+    |uuid    |用户uuid                            |
+    |role_id   |角色ID                            |
